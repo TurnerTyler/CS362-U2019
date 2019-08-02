@@ -15,6 +15,7 @@ char inputChar()
 char *inputString(char *s)
 {
     // TODO: rewrite this function
+    //char s[10];
     int i = 0;
     int len = rand() % 20 - 1 + 1 + 1;
 
