@@ -639,7 +639,7 @@ switch( cardNumber )
 
 return -1;
 }
-
+/*
 int mine_helper(int choice1, int choice2, struct gameState *state, int handPos){
      int currentPlayer = whoseTurn(state);
      int j = state->hand[currentPlayer][choice1];  //store card we will trash
@@ -676,6 +676,7 @@ int mine_helper(int choice1, int choice2, struct gameState *state, int handPos){
 
      return 0;
 }
+*/
 int baron_helper(int choice1, struct gameState *state){
      int currentPlayer= whoseTurn(state);
      state->numBuys++;//Increase buys by 1!
@@ -861,7 +862,7 @@ int tribute_helper( struct gameState *state){
                //No Card to Reveal
                if (DEBUG){
                     printf("No cards to reveal\n");
-               } 
+               }
           }
      }
 
