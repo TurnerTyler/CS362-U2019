@@ -677,6 +677,8 @@ int mine_helper(int choice1, int choice2, struct gameState *state, int handPos){
      return 0;
 }
 */
+
+/*
 int baron_helper(int choice1, struct gameState *state){
      int currentPlayer= whoseTurn(state);
      state->numBuys++;//Increase buys by 1!
@@ -729,11 +731,14 @@ int baron_helper(int choice1, struct gameState *state){
 
      return 0;
 }
+*/
+
 
 void add_coin(struct gameState *state, int num_coins){
      state->coins = state->coins + num_coins;
 }
 
+/*
 int minion_helper(int choice1, int choice2, struct gameState *state, int handPos){
      int currentPlayer = whoseTurn(state);
      state->numActions++;
@@ -786,6 +791,8 @@ int minion_helper(int choice1, int choice2, struct gameState *state, int handPos
      return 0;
 
 }
+*/
+
 int ambassador_helper(int choice1, int choice2, struct gameState *state, int handPos){
      int j = 0;		//used to check if player has enough cards to discard
      int currentPlayer = whoseTurn(state);
@@ -845,6 +852,7 @@ int ambassador_helper(int choice1, int choice2, struct gameState *state, int han
      return 0;
 }
 
+/*
 int tribute_helper( struct gameState *state){
      int currentPlayer = whoseTurn(state);
      int nextPlayer = currentPlayer + 1;
@@ -907,6 +915,7 @@ int tribute_helper( struct gameState *state){
 
      return 0;
 }
+*/
 
 int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState *state, int handPos, int *bonus){
      int i;
