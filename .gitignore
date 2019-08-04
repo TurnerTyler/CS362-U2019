@@ -104,4 +104,4 @@ REVISION
 /gmp*
 /isl*
 
-.DS*
+*.DS*
