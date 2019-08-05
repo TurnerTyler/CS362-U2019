@@ -36,7 +36,7 @@ int main(){
   handPos = choice1;
   s.hand[currentPlayer][2] = province;
 
-  i = mine_helper(choice1, choice2, &s, handPos)
+  i = mine_helper(choice1, choice2, &s, handPos);
   if(i > 0){
     printf("failed check choice < copper\n");
   }
@@ -58,7 +58,7 @@ int main(){
   choice1 = 2;
   s.hand[currentPlayer][2] = adventurer;
 
-  i = mine_helper()
+  i = mine_helper(choice1, choice2, &s, handPos);
   if(i > 0){
     printf("failed check choice > gold\n");
   }
@@ -81,7 +81,7 @@ int main(){
   choice2 = 2;
   s.hand[currentPlayer][2] = 27;
 
-  i = mine_helper()
+  i = mine_helper(choice1, choice2, &s, handPos);
   if(i > 0){
     printf("failed check choice > treasure_map\n");
   }
@@ -104,7 +104,7 @@ int main(){
   choice2 = 2;
   s.hand[currentPlayer][2] = -1;
 
-  i = mine_helper()
+  i = mine_helper(choice1, choice2, &s, handPos);
   if(i > 0){
     printf("failed check choice < curse\n");
   }
@@ -128,11 +128,11 @@ int main(){
   handPos = choice1;
   s.hand[currentPlayer][2] = province;
 
-  i = mine_helper(choice1, choice2, &s, handPos)
+  i = mine_helper(choice1, choice2, &s, handPos);
   if(i < 0){
     printf("failed before getting card on valid input\n");
   }
-  if()
+ // if()
 
   return 0;
 }

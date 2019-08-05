@@ -43,6 +43,11 @@ randomtestresults: randomtestcard1.c randomtestcard2.c  randomtestcard3.c domini
 	gcov randomtestcard3.c -b >> randomtestresults.out
 	cat randomtestcard3.c.gcov >> randomtestresults.out
 
+test: unittest5.c dominion.o rngs.o
+	gcc -o unittest5 -g unittest5.c dominion.o rngs.o $(CFLAGS)
+	./unittest5 &> test.out
+	gcov unittest5.c -b >> test.out
+	cat unittest5.c.gcov >> test.out
 
 player: player.c interface.o
 	gcc -o player player.c -g  dominion.o rngs.o interface.o $(CFLAGS)
