@@ -135,7 +135,7 @@ int main(){
     }
     if(choice1 == 0){
       baron_helper(choice1, &state);
-      
+
       if(supplyCount(estate, &state) != prevsupply + 1 && silence == 1)
       {
         printf("Supply Count did not update.\n");
