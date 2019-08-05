@@ -7,7 +7,7 @@
 #include <math.h>
 
 int minion_helper(int choice1, int choice2, struct gameState *state, int handPos){
-     int currentPlayer = whoseTurn(state);
+     //int currentPlayer = whoseTurn(state);
      state->numActions++;
 
      //discard card from hand
