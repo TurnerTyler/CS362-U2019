@@ -15,7 +15,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 int mine_helper(int choice1, int choice2, struct gameState *state, int handPos);
 int baron_helper(int choice1, struct gameState *state);
 void add_coin(struct gameState *state, int num_coins);
-int minion_helper(int choice1, int choice2, struct gameState *state, int handPos);
+int minion_helper(int choice1, int choice2, struct gameState *state, int handPos, int currentPlayer);
 int ambassador_helper(int choice1, int choice2, struct gameState *state, int handPos);
 int tribute_helper( struct gameState *state);
 #endif
