@@ -72,6 +72,7 @@ int main(){
   int p = 0;
   int kin = 1;
   int prevsupply;
+  int prevcoins;
   int currentPlayer;
   //set silence to 1 to see errors
   int silence = 0;
@@ -125,6 +126,7 @@ int main(){
 
     //call baron function and test result
     prevsupply = supplyCount(estate, &state);
+    prevcoins = state.coins;
     p = 0;
     for(p=0; p<state.handCount[currentPlayer];p++){
       if(state.hand[currentPlayer][p] == estate){
@@ -138,7 +140,7 @@ int main(){
       {
         printf("Supply Count did not update.\n");
       }
-      if(state.coins != 0 && silence == 1){
+      if(state.coins != prevcoins && silence == 1){
         printf("Coins added when shouldn't.\n");
       }
 
@@ -151,7 +153,7 @@ int main(){
         if(supplyCount(estate, &state) != prevsupply && silence == 1){
           printf("Supply estate cards altered when shouldn't.\n");
         }
-        if(state.coins != 4){
+        if(state.coins != prevcoins + 4){
           printf("Did not get coins.\n");
         }
 
