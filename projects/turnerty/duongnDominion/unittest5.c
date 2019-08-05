@@ -132,7 +132,9 @@ int main(){
   if(i < 0){
     printf("failed before getting card on valid input\n");
   }
- // if()
+  if(s.handCount[currentPlayer - 1] != 5){
+    printf("failed to get correct treasure card silver\n");
+  }
 
   return 0;
 }
