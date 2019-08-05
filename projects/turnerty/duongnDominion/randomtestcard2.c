@@ -6,7 +6,6 @@
 #include "rngs.h"
 #include <math.h>
 
-<<<<<<< HEAD
 int minion_helper(int choice1, int choice2, struct gameState *state, int handPos){
      //int currentPlayer = whoseTurn(state);
      state->numActions++;
@@ -59,8 +58,6 @@ int minion_helper(int choice1, int choice2, struct gameState *state, int handPos
      return 0;
 
 }
-=======
->>>>>>> b34e76640907848416589250dfdc9a35f0952f2d
 
 int main(){
   int numPlayers;
