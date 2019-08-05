@@ -1042,7 +1042,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 
           case mine:
 
-          mine_helper(choice1, choice2, state, handPos);
+          //mine_helper(choice1, choice2, state, handPos);
 
 /*****************
           j = state->hand[currentPlayer][choice1];  //store card we will trash
@@ -1129,7 +1129,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
           return 0;
 
           case baron:
-          baron_helper(choice1, state);
+          //baron_helper(choice1, state);
 /**************************************
           state->numBuys++;//Increase buys by 1!
           if (choice1 > 0){//Boolean true or going to discard an estate
@@ -1194,7 +1194,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 
           case minion:
 
-               minion_helper(choice1, choice2, state, handPos);
+               //minion_helper(choice1, choice2, state, handPos);
           //+1 action
           // state->numActions++;
           //
@@ -1269,7 +1269,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
           return 0;
 
           case tribute:
-               tribute_helper(state);
+              // tribute_helper(state);
           // if ((state->discardCount[nextPlayer] + state->deckCount[nextPlayer]) <= 1){
           //      if (state->deckCount[nextPlayer] > 0){
           //           tributeRevealedCards[0] = state->deck[nextPlayer][state->deckCount[nextPlayer]-1];

@@ -132,8 +132,8 @@ int main(){
       }
     }
     if(choice1 == 0){
-      baronCard_helper(choice1, &state);
-      /*
+      baron_helper(choice1, &state);
+      
       if(supplyCount(estate, &state) != prevsupply + 1 && silence == 1)
       {
         printf("Supply Count did not update.\n");
@@ -141,47 +141,47 @@ int main(){
       if(state.coins != 0 && silence == 1){
         printf("Coins added when shouldn't.\n");
       }
-      */
+
     }
     else{
       if(state.hand[currentPlayer][p] == estate){
         prevsupply = supplyCount(estate, &state);
-        baronCard(choice, &state);
-        /*
+        baron_helper(choice1, &state);
+
         if(supplyCount(estate, &state) != prevsupply && silence == 1){
           printf("Supply estate cards altered when shouldn't.\n");
         }
         if(state.coins != 4){
           printf("Did not get coins.\n");
         }
-        */
+
       }
       else{
         prevsupply = supplyCount(estate, &state);
-        baronCard(choice, &state);
+        baron_helper(choice1, &state);
         if(prevsupply < 1){
-          /*
+
           if(prevsupply != supplyCount(estate, &state) && silence == 1){
             printf("Supply estate cards altered when shouldn't.\n");
           }
-          */
+
         }
         if(prevsupply > 0){
-          /*
+
           if(prevsupply != supplyCount(estate, &state) + 1 && silence == 1){
             printf("Supply not altered.\n");
           }
-          */
+
           for(p=0; p<state.handCount[currentPlayer];p++){
             if(state.hand[currentPlayer][p] == estate){
               break;
             }
           }
-          /*
+
           if(state.hand[currentPlayer][p] != estate && silence == 1){
             printf("estate not added to hand\n");
           }
-          */
+
       }
     }
   }
